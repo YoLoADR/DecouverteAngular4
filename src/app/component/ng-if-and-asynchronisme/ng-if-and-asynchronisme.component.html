@@ -1,0 +1,23 @@
+<h2>*ngIf et asynchronisme</h2>
+<p>
+  L’exemple suivant simule un appel vers un chargement de données d’une durée de deux secondes montrant ainsi que la condition évolue après les deux secondes.
+</p>
+
+<!--<div *ngIf="user | async; let user; then userTemplate else loading">
+</div>
+
+<ng-template #userTemplate>
+  {{user.firstName}} {{user.lastName}}
+</ng-template>
+<ng-template #loading>
+  loading....
+</ng-template>-->
+
+<div *ngIf="user | async; let user; else loading">
+  {{user.firstName}} {{user.lastName}}
+</div>
+<ng-template #loading>
+  loading....
+</ng-template>
+
+<hr>

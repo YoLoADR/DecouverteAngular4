@@ -1,0 +1,46 @@
+
+<h2>
+*ngIf et ng-template 
+</h2>
+
+<div *ngIf="authenticated; else notAuthenticated">
+<p>authenticated est égale à true, donc c'est le *ngIf qui s'affiche</p>
+<p>user is logged in.</p> 
+<button class="btn btn-primary" (click)="login()">Log out</button>
+</div>
+
+<ng-template #notAuthenticated>
+<p>authenticated est égale à false, donc c'est le ng-template avec #notAuthenticated qui s'affiche</p>
+Please login to continue.
+<br> (ng-template #notAuthenticated)
+<br>
+<br>
+<button class="btn btn-primary" (click)="login()">Log in</button>
+</ng-template>
+
+<br>
+<br>
+<p>La condition authenticated est : {{authenticated}}</p>
+
+<hr>
+
+<h2>Version enrichi *ngIf et ng-template</h2>
+
+<div *ngIf="connected; then isConnected else notConnected"></div>
+<p>Le status de connected est :{{connected}}</p>
+
+<ng-template #isConnected>
+<h3>ng-template #isConnected</h3>
+<p>connected est à true donc je m'affiche</p>
+<button class="btn btn-primary" (click)="deconnexion()">Deconnexion</button>
+</ng-template>
+<ng-template #notConnected>
+<h3>ng-template #notConnected</h3>
+<p>connected est à false donc je m'affiche </p>
+<button class="btn btn-primary" (click)="connexion()">Connexion</button>
+</ng-template>
+
+<hr>
+
+
+

@@ -1,0 +1,10 @@
+<h2>Directive email</h2>
+<p>source : <a href="https://angular.io/docs/ts/latest/api/forms/index/EmailValidator-directive.html">doc</a></p>
+<p> une directive “email” permettant de valider automatiquement la bonne saisie d’un email dans un champ texte. La syntaxe est la suivante :</p>
+
+<form #f="ngForm">
+    <input type="email" ngModel name="email" required email>
+    <button class="btn btn-primary">Envoyer</button>
+    <p>Form state : {{f.valid ? 'VALID' : 'INVALID'}}</p>
+</form>
+<hr>

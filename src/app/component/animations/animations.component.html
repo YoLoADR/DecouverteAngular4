@@ -1,0 +1,24 @@
+<h2>Animations</h2>
+<p>source : <a href="https://angular.io/docs/ts/latest/guide/animations.html">doc</a>
+<br>
+C'est possible qu'il y est une erreur au niveau de l'injection du module animation car Angular Cli n'est pas forcément mis à jour pour ce la il ya une manipulation à faire voir le commentaire html 
+<!--<ul>
+  <li>- npm install angular-animate</li>
+  <li>- npm install @ angular / {common,compiler,compiler-cli,core,forms,http,platform-browser,platform-browser-dynamic,platform-server,router,animations} @latest --save</li>
+  <li>- npm install typescript@latest --save</li>
+  <li>- rm -rf node_modules</li>
+  <li>- npm cache clear</li>
+  <li>- npm install</li>
+</ul>-->
+
+<a href="http://stackoverflow.com/questions/42857345/cannot-find-module-angular-animations">StackOverFlow</a>
+
+
+</p>
+
+<p> L’exemple d’animation présenté en dessous montre comment changer la couleur de fond d’une div via un bouton </p>
+<hr>
+
+<div [@updateBgColor]="color">
+    <button class="btn btn-primary" (click)="updateBgColor()">Mettre à jour la couleur de fond</button>
+</div>
